@@ -1,4 +1,4 @@
-#! -*-coding:utf-8 -*-
+#! -*-coding:UTF-8 -*-
 from org.slf4j import LoggerFactory
 
 from com.example.java.chapter10 import BuildingType
@@ -14,23 +14,43 @@ from com.example.java.chapter10 import BuildingType
 
 '''
 
+
 class Building(BuildingType):
     log = LoggerFactory.getLogger("Building")
 
-    def __init__(self, buildingName, buildingAddress, buildingId):
+
+    def __init__(self):
         Building.log.info("python文件中Building对象进行初始化。。。 ")
-        self.buildingName = buildingName
-        self.buildingAddress = buildingAddress
-        self.buildingId = buildingId
+        self.buildingName = None
+        self.buildingAddress = None
+        self.buildingId = None
+
 
     def getBuildingName(self):
         Building.log.info("getBuildingName 方法被调用")
         return self.buildingName
 
+
     def getBuildingAddress(self):
         Building.log.info("getBuildingAddress 方法被调用")
         return self.buildingAddress
 
+
     def getBuildingId(self):
         Building.log.info("getBuildingId 方法被调用")
         return self.buildingId
+
+
+    def setBuildingName(self, buildingName):
+        Building.log.info("setBuildingName 方法被调用")
+        self.buildingName = buildingName
+
+
+    def setBuildingAddress(self, buildingAddress):
+        Building.log.info("setBuildingAddress 方法被调用")
+        self.buildingAddress = buildingAddress
+
+
+    def setBuildingId(self, buildingId):
+        Building.log.info("setBuildingId 方法被调用")
+        self.buildingId = buildingId
